@@ -1,0 +1,19 @@
+diff --git a/clone.module b/clone.module
+index 81eef6e..369aa81 100644
+--- a/clone.module
++++ b/clone.module
+@@ -48,12 +48,12 @@ function clone_menu() {
+     'access arguments' => array(1, TRUE, 3),
+     'page callback' => 'clone_node_check',
+     'page arguments' => array(1),
+-    'title' => 'Clone content',
++    'title' => 'Clone',
+     'title callback' => 'clone_action_link_title',
+     'title arguments' => array(1),
+     'weight' => 5,
+     'file' => 'clone.pages.inc',
+-    'type' => MENU_LOCAL_ACTION,
++    'type' => MENU_LOCAL_TASK,
+     'context' => MENU_CONTEXT_PAGE | MENU_CONTEXT_INLINE,
+   );
+   return $items;
