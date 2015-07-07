@@ -1,0 +1,16 @@
+diff --git a/picture.module b/picture.module
+index dd27eec..3382d1b 100644
+--- a/picture.module
++++ b/picture.module
+@@ -1028,6 +1028,11 @@ function theme_picture_formatter($variables) {
+     return drupal_render($image_formatter);
+   }
+   $item = $variables['item'];
++  
++  if (empty($item['uri'])) {
++    $item = file_load($item['fid']);
++    $item = (array)$item;
++  }
+ 
+   $responsive_image = array(
+     '#theme' => 'picture',
